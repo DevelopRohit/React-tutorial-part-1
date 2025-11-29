@@ -1,4 +1,5 @@
 import style from "./Apptodo.module.css";
+import { MdAddTask } from "react-icons/md";
 function Apptodo({ itemnenamehandle, itemdatehandle, addbuttonhandleclick }) {
   return (
     <div>
@@ -20,7 +21,7 @@ function Apptodo({ itemnenamehandle, itemdatehandle, addbuttonhandleclick }) {
               className={style.AddBtn}
               onClick={addbuttonhandleclick}
             >
-              Add
+              <MdAddTask />
             </button>
           </div>
         </div>

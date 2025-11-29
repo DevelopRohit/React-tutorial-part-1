@@ -1,4 +1,5 @@
 import style from "./Task.module.css";
+import { MdDeleteForever } from "react-icons/md";
 function Task({ todoname, tododate, onDeleteclick }) {
   return (
     <div className="row">
@@ -10,7 +11,7 @@ function Task({ todoname, tododate, onDeleteclick }) {
           className={style.DeleteButton}
           onClick={() => onDeleteclick(todoname)}
         >
-          Delete
+          <MdDeleteForever />
         </button>
       </div>
     </div>
