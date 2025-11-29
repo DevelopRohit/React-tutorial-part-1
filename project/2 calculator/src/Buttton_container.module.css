@@ -1,0 +1,22 @@
+.btn_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 100;
+    border: none;
+    color: #333;
+    border-radius: 5px;
+    background-color: #c9b9b9;
+    cursor: pointer;
+}
+
+.totale {
+    grid-column: span 3;
+    background-color: #c9b9b9;
+    font-size: 20px;
+}

@@ -1,0 +1,8 @@
+.AddBtn {
+  background-color: rgb(0, 140, 255);
+  color: white;
+  padding: 8px 18px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
