@@ -10,12 +10,10 @@ function App() {
   let [itemdate, setitemdate] = useState(todoitem);
 
   let itemnenamehandle = (event) => {
-    // console.log(event.target.value);
     setitemname(event.target.value);
   };
 
   let itemdatehandle = (event) => {
-    // console.log(event.target.value);
     setitemdate(event.target.value);
   };
 
@@ -25,10 +23,12 @@ function App() {
       tododate: itemdate,
     };
     setTodoItem([...todoitem, newtodoitem]);
+    setitemname("");
+    setitemdate("");
   };
   let handledeleteitems = (todoitemname) => {
     let newtodoitem = todoitem.filter((item) => {
-      item.name !== todoitemname;
+      return item.todoname !== todoitemname;
     });
     setTodoItem(newtodoitem);
   };
@@ -40,6 +40,8 @@ function App() {
         itemnenamehandle={itemnenamehandle}
         itemdatehandle={itemdatehandle}
         addbuttonhandleclick={addbuttonhandleclick}
+        itemname={itemname}
+        itemdate={itemdate}
       />
       {todoitem.length === 0 && <Welcomemessage></Welcomemessage>}
       <Iteamcontainer

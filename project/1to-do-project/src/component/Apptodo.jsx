@@ -1,6 +1,12 @@
 import style from "./Apptodo.module.css";
 import { MdAddTask } from "react-icons/md";
-function Apptodo({ itemnenamehandle, itemdatehandle, addbuttonhandleclick }) {
+function Apptodo({
+  itemnenamehandle,
+  itemdatehandle,
+  addbuttonhandleclick,
+  itemname,
+  itemdate,
+}) {
   return (
     <div>
       <div className="container text-center">
@@ -10,10 +16,11 @@ function Apptodo({ itemnenamehandle, itemdatehandle, addbuttonhandleclick }) {
               type="text"
               placeholder="Enter ToDo Here"
               onChange={itemnenamehandle}
+              value={itemname}
             />
           </div>
           <div className="col-4">
-            <input type="date" onChange={itemdatehandle} />
+            <input type="date" onChange={itemdatehandle} value={itemdate} />
           </div>
           <div className="col-2">
             <button
